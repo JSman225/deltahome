@@ -1,6 +1,7 @@
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider"
 import Nav from "@/components/nav";
+import { CommandMenu } from "@/components/commandMenu";
 
 export default function RootLayout({ children }) {
   return (
@@ -14,10 +15,10 @@ export default function RootLayout({ children }) {
             enableSystem
             disableTransitionOnChange
           >
+            <CommandMenu />
+            <Nav></Nav>
             {children}
           </ThemeProvider>
-
-          <Nav></Nav>
         </body>
       </html>
     </>

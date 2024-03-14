@@ -17,7 +17,8 @@ import { ModeToggle } from "@/components/ui/modeToggle"
 
 export default function Nav() {
     return (
-        <Menubar>
+        <Menubar 
+        className="mx-6 my-4">
             <MenubarMenu>
                 <MenubarTrigger>File</MenubarTrigger>
                 <MenubarContent>
