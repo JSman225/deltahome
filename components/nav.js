@@ -17,31 +17,32 @@ import { ModeToggle } from "@/components/ui/modeToggle"
 
 export default function Nav() {
     return (
-        <Menubar 
-        className="mx-6 my-4">
+        <Menubar
+            className="mx-6 my-4">
             <MenubarMenu>
-                <MenubarTrigger>File</MenubarTrigger>
+                <MenubarTrigger><b>Deltasoft AI</b></MenubarTrigger>
                 <MenubarContent>
                     <MenubarItem>
-                        New Tab <MenubarShortcut>⌘T</MenubarShortcut>
+                        About Deltasoft AI
                     </MenubarItem>
+                    <MenubarSeparator />
                     <MenubarItem>
-                        New Window <MenubarShortcut>⌘N</MenubarShortcut>
+                        Prefrences... <MenubarShortcut>⌘P</MenubarShortcut>
                     </MenubarItem>
-                    <MenubarItem disabled>New Incognito Window</MenubarItem>
+                    <MenubarSeparator />
+                    <MenubarItem>
+                        New Chat <MenubarShortcut>⌘N</MenubarShortcut>
+                    </MenubarItem>
+                    <MenubarItem disabled>New Private Chat</MenubarItem>
                     <MenubarSeparator />
                     <MenubarSub>
                         <MenubarSubTrigger>Share</MenubarSubTrigger>
                         <MenubarSubContent>
-                            <MenubarItem>Email link</MenubarItem>
-                            <MenubarItem>Messages</MenubarItem>
-                            <MenubarItem>Notes</MenubarItem>
+                            <MenubarItem>Invite Member</MenubarItem>
+                            <MenubarItem></MenubarItem>
+                            <MenubarItem></MenubarItem>
                         </MenubarSubContent>
                     </MenubarSub>
-                    <MenubarSeparator />
-                    <MenubarItem>
-                        Print... <MenubarShortcut>⌘P</MenubarShortcut>
-                    </MenubarItem>
                 </MenubarContent>
             </MenubarMenu>
             <MenubarMenu>
@@ -104,7 +105,21 @@ export default function Nav() {
                     <MenubarItem inset>Add Profile...</MenubarItem>
                 </MenubarContent>
             </MenubarMenu>
-            <ModeToggle/>
+            <MenubarMenu>
+                <MenubarTrigger>Help</MenubarTrigger>
+                <MenubarContent>
+                    <MenubarRadioGroup value="benoit">
+                        <MenubarRadioItem value="andy">Andy</MenubarRadioItem>
+                        <MenubarRadioItem value="benoit">Benoit</MenubarRadioItem>
+                        <MenubarRadioItem value="Luis">Luis</MenubarRadioItem>
+                    </MenubarRadioGroup>
+                    <MenubarSeparator />
+                    <MenubarItem inset>Edit...</MenubarItem>
+                    <MenubarSeparator />
+                    <MenubarItem inset>Add Profile...</MenubarItem>
+                </MenubarContent>
+            </MenubarMenu>
+            <ModeToggle className="ml-6" />
         </Menubar>
     )
 }
