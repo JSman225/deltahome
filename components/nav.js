@@ -23,10 +23,6 @@ export default function Nav() {
                 <MenubarTrigger><b>Deltasoft AI</b></MenubarTrigger>
                 <MenubarContent>
                     <MenubarItem>
-                        About Deltasoft AI
-                    </MenubarItem>
-                    <MenubarSeparator />
-                    <MenubarItem>
                         Prefrences... <MenubarShortcut>⌘P</MenubarShortcut>
                     </MenubarItem>
                     <MenubarSeparator />
@@ -43,6 +39,20 @@ export default function Nav() {
                             <MenubarItem></MenubarItem>
                         </MenubarSubContent>
                     </MenubarSub>
+                </MenubarContent>
+            </MenubarMenu>
+            <MenubarMenu>
+                <MenubarTrigger>Profiles</MenubarTrigger>
+                <MenubarContent>
+                    <MenubarRadioGroup value="benoit">
+                        <MenubarRadioItem value="andy">Andy</MenubarRadioItem>
+                        <MenubarRadioItem value="benoit">Benoit</MenubarRadioItem>
+                        <MenubarRadioItem value="Luis">Luis</MenubarRadioItem>
+                    </MenubarRadioGroup>
+                    <MenubarSeparator />
+                    <MenubarItem inset>Edit...</MenubarItem>
+                    <MenubarSeparator />
+                    <MenubarItem inset>Add Profile...</MenubarItem>
                 </MenubarContent>
             </MenubarMenu>
             <MenubarMenu>
@@ -91,32 +101,31 @@ export default function Nav() {
                     <MenubarItem inset>Hide Sidebar</MenubarItem>
                 </MenubarContent>
             </MenubarMenu>
-            <MenubarMenu>
-                <MenubarTrigger>Profiles</MenubarTrigger>
-                <MenubarContent>
-                    <MenubarRadioGroup value="benoit">
-                        <MenubarRadioItem value="andy">Andy</MenubarRadioItem>
-                        <MenubarRadioItem value="benoit">Benoit</MenubarRadioItem>
-                        <MenubarRadioItem value="Luis">Luis</MenubarRadioItem>
-                    </MenubarRadioGroup>
-                    <MenubarSeparator />
-                    <MenubarItem inset>Edit...</MenubarItem>
-                    <MenubarSeparator />
-                    <MenubarItem inset>Add Profile...</MenubarItem>
-                </MenubarContent>
-            </MenubarMenu>
+
             <MenubarMenu>
                 <MenubarTrigger>Help</MenubarTrigger>
                 <MenubarContent>
-                    <MenubarRadioGroup value="benoit">
-                        <MenubarRadioItem value="andy">Andy</MenubarRadioItem>
-                        <MenubarRadioItem value="benoit">Benoit</MenubarRadioItem>
-                        <MenubarRadioItem value="Luis">Luis</MenubarRadioItem>
-                    </MenubarRadioGroup>
+                    <MenubarItem>
+                        About Deltasoft AI
+                    </MenubarItem>
                     <MenubarSeparator />
-                    <MenubarItem inset>Edit...</MenubarItem>
+                    <MenubarItem>
+                        Prefrences... <MenubarShortcut>⌘P</MenubarShortcut>
+                    </MenubarItem>
                     <MenubarSeparator />
-                    <MenubarItem inset>Add Profile...</MenubarItem>
+                    <MenubarItem>
+                        New Chat <MenubarShortcut>⌘N</MenubarShortcut>
+                    </MenubarItem>
+                    <MenubarItem disabled>New Private Chat</MenubarItem>
+                    <MenubarSeparator />
+                    <MenubarSub>
+                        <MenubarSubTrigger>Share</MenubarSubTrigger>
+                        <MenubarSubContent>
+                            <MenubarItem>Invite Member</MenubarItem>
+                            <MenubarItem></MenubarItem>
+                            <MenubarItem></MenubarItem>
+                        </MenubarSubContent>
+                    </MenubarSub>
                 </MenubarContent>
             </MenubarMenu>
             <ModeToggle className="ml-6" />

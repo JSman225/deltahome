@@ -17,7 +17,9 @@ export default function RootLayout({ children }) {
           >
             <CommandMenu />
             <Nav></Nav>
-            {children}
+            <main className="mx-6 my-4">
+              {children}
+            </main>
           </ThemeProvider>
         </body>
       </html>
